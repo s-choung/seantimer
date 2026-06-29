@@ -7,6 +7,20 @@ live menu-bar readout, and a focus history with weekly stats.
 > SwiftUI + AppKit, macOS 14+. Builds with just the Command Line Tools (no full
 > Xcode required).
 
+## Download
+
+**[⬇ Download the latest app (.zip)](https://github.com/s-choung/timetimer/releases/latest/download/timetimer_sean.zip)** · or browse all [Releases](https://github.com/s-choung/timetimer/releases).
+
+Unzip and drag `timetimer_sean.app` into `/Applications`. Requires **macOS 14
+(Sonoma)+** on **Apple Silicon (arm64)**.
+
+> **First launch:** this build is ad-hoc signed (no Apple notarization), so
+> macOS may say it can't verify the developer. Right-click the app → **Open** →
+> **Open**, or run once:
+> ```bash
+> xattr -dr com.apple.quarantine /Applications/timetimer_sean.app
+> ```
+
 ## Features
 
 - **Drag-to-set dial** — grab the rim and turn to dial 0–60 minutes; the wedge
