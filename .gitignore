@@ -1,0 +1,13 @@
+# Build artifacts
+build/
+.build/
+DerivedData/
+
+# XcodeGen output (regenerate with `xcodegen`)
+*.xcodeproj/
+
+# Runtime / temp
+*.tmp
+
+# macOS
+.DS_Store

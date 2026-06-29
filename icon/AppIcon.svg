@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- timetimer_sean app icon — red wedge on a white squircle (plan §7) -->
+  <rect x="46" y="46" width="932" height="932" rx="208" ry="208" fill="#ffffff"/>
+  <!-- dial ring -->
+  <circle cx="512" cy="512" r="335" fill="none" stroke="#000000" stroke-opacity="0.10" stroke-width="12"/>
+  <!-- red wedge: 60% of a revolution, swept counterclockwise from 12 o'clock -->
+  <path d="M512,512 L512,177 A335,335 0 1 0 708.9,783.0 Z" fill="#e62929"/>
+  <!-- hub -->
+  <circle cx="512" cy="512" r="20" fill="#000000" fill-opacity="0.85"/>
+</svg>
