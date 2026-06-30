@@ -9,7 +9,9 @@ live menu-bar readout, and a focus history with weekly stats.
 
 ## Download
 
-**[⬇ Download timetimer_sean.dmg](https://github.com/s-choung/timetimer/releases/latest/download/timetimer_sean.dmg)** — open it, then drag the app onto the **Applications** shortcut.
+[![Download for macOS](https://img.shields.io/badge/⬇%20Download-macOS%20.dmg-2ea44f?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/s-choung/timetimer/releases/latest/download/timetimer_sean.dmg)
+
+Open the `.dmg`, then drag the app onto the **Applications** shortcut.
 
 Prefer a plain archive? Grab the [.zip](https://github.com/s-choung/timetimer/releases/latest/download/timetimer_sean.zip), or browse all [Releases](https://github.com/s-choung/timetimer/releases). Requires **macOS 14 (Sonoma)+** on **Apple Silicon (arm64)**.
 
