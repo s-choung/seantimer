@@ -3,6 +3,8 @@
 A lightweight **Time Timer-style** visual countdown for macOS — a red wedge that
 depletes as your focus session runs, with a live menu-bar readout and focus history.
 
+<p align="center"><img src="docs/demo.gif" alt="Seantimer demo" width="720"></p>
+
 [![Download for macOS](https://img.shields.io/badge/⬇%20Download-macOS%20.dmg-2ea44f?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/s-choung/seantimer/releases/latest/download/Seantimer.dmg)
 
 Open the `.dmg`, drag **Seantimer** onto Applications. **macOS 14+ · Apple Silicon.**
