@@ -6,17 +6,17 @@ import PackageDescription
 // without full Xcode. The SwiftUI app itself is built from Sources/Core +
 // Sources/App via the XcodeGen project (project.yml) or the build script.
 //
-// The library target is named `UltimateFocus` so its module name matches the
-// Xcode app target — the same test files (`@testable import UltimateFocus`)
+// The library target is named `Seantimer` so its module name matches the
+// Xcode app target — the same test files (`@testable import Seantimer`)
 // work under both build systems.
 let package = Package(
-    name: "UltimateFocus",
+    name: "Seantimer",
     platforms: [.macOS(.v14)],
     targets: [
-        .target(name: "UltimateFocus", path: "Sources/Core"),
+        .target(name: "Seantimer", path: "Sources/Core"),
         .testTarget(
-            name: "UltimateFocusTests",
-            dependencies: ["UltimateFocus"],
+            name: "SeantimerTests",
+            dependencies: ["Seantimer"],
             path: "Tests/CoreTests"
         ),
     ]

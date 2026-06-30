@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build Ultimate Focus into a runnable .app using only Command Line Tools
+# Build Seantimer into a runnable .app using only Command Line Tools
 # (no full Xcode required). Compiles every source with swiftc, wraps the binary
 # in an .app bundle, writes Info.plist, and ad-hoc codesigns it.
 #
@@ -9,7 +9,7 @@ set -euo pipefail
 
 PROJECT="$(cd "$(dirname "$0")" && pwd)"
 BUILD="$PROJECT/build"
-APP="$BUILD/timetimer_sean.app"
+APP="$BUILD/Seantimer.app"
 MACOS="$APP/Contents/MacOS"
 RES="$APP/Contents/Resources"
 SDK="$(xcrun --sdk macosx --show-sdk-path)"
@@ -33,18 +33,18 @@ swiftc -parse-as-library -sdk "$SDK" -target "$TARGET" \
   "$PROJECT/Sources/App/HistoryView.swift" \
   "$PROJECT/Sources/App/MenuBarPanel.swift" \
   "$PROJECT/Sources/App/ContentView.swift" \
-  "$PROJECT/Sources/App/UltimateFocusApp.swift" \
-  -o "$MACOS/timetimer_sean"
+  "$PROJECT/Sources/App/SeantimerApp.swift" \
+  -o "$MACOS/Seantimer"
 
 cat > "$APP/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleName</key>            <string>timetimer_sean</string>
-    <key>CFBundleDisplayName</key>     <string>timetimer_sean</string>
-    <key>CFBundleIdentifier</key>      <string>com.sean.timetimer</string>
-    <key>CFBundleExecutable</key>      <string>timetimer_sean</string>
+    <key>CFBundleName</key>            <string>Seantimer</string>
+    <key>CFBundleDisplayName</key>     <string>Seantimer</string>
+    <key>CFBundleIdentifier</key>      <string>com.sean.seantimer</string>
+    <key>CFBundleExecutable</key>      <string>Seantimer</string>
     <key>CFBundleIconFile</key>        <string>AppIcon</string>
     <key>CFBundlePackageType</key>     <string>APPL</string>
     <key>CFBundleShortVersionString</key> <string>1.0</string>

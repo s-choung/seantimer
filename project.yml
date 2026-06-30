@@ -1,8 +1,8 @@
-# XcodeGen spec — run `xcodegen` to (re)generate UltimateFocus.xcodeproj, then
+# XcodeGen spec — run `xcodegen` to (re)generate Seantimer.xcodeproj, then
 # open it and ⌘R. Keeps the project file deterministic and reviewable.
-name: UltimateFocus
+name: Seantimer
 options:
-  bundleIdPrefix: com.ultimatefocus
+  bundleIdPrefix: com.sean
   deploymentTarget:
     macOS: "14.0"
   createIntermediateGroups: true
@@ -16,7 +16,7 @@ settings:
     DEAD_CODE_STRIPPING: YES
 
 targets:
-  UltimateFocus:
+  Seantimer:
     type: application
     platform: macOS
     sources:
@@ -24,8 +24,8 @@ targets:
       - path: Sources/App
     settings:
       base:
-        PRODUCT_NAME: UltimateFocus
-        PRODUCT_BUNDLE_IDENTIFIER: com.ultimatefocus.UltimateFocus
+        PRODUCT_NAME: Seantimer
+        PRODUCT_BUNDLE_IDENTIFIER: com.sean.seantimer
         GENERATE_INFOPLIST_FILE: YES
         ENABLE_APP_SANDBOX: NO                       # plan §7 / locked decision 5
         INFOPLIST_KEY_NSPrincipalClass: NSApplication
@@ -34,13 +34,13 @@ targets:
         MARKETING_VERSION: "1.0"
         COMBINE_HIDPI_IMAGES: YES
 
-  UltimateFocusTests:
+  SeantimerTests:
     type: bundle.unit-test
     platform: macOS
     sources:
       - path: Tests/CoreTests
     dependencies:
-      - target: UltimateFocus
+      - target: Seantimer
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.ultimatefocus.UltimateFocusTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.sean.seantimerTests

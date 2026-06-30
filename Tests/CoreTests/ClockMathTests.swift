@@ -1,6 +1,6 @@
 import XCTest
 import CoreGraphics
-@testable import UltimateFocus
+@testable import Seantimer
 
 final class ClockMathTests: XCTestCase {
     let center = CGPoint(x: 100, y: 100)

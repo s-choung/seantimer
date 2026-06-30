@@ -1,4 +1,4 @@
-# timetimer_sean
+# Seantimer
 
 A lightweight **Time Timer-style** visual countdown for macOS — a red wedge that
 depletes as your focus session runs, an OpenAI-minimal red/white/black look, a
@@ -9,17 +9,17 @@ live menu-bar readout, and a focus history with weekly stats.
 
 ## Download
 
-[![Download for macOS](https://img.shields.io/badge/⬇%20Download-macOS%20.dmg-2ea44f?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/s-choung/timetimer/releases/latest/download/timetimer_sean.dmg)
+[![Download for macOS](https://img.shields.io/badge/⬇%20Download-macOS%20.dmg-2ea44f?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/s-choung/seantimer/releases/latest/download/Seantimer.dmg)
 
 Open the `.dmg`, then drag the app onto the **Applications** shortcut.
 
-Prefer a plain archive? Grab the [.zip](https://github.com/s-choung/timetimer/releases/latest/download/timetimer_sean.zip), or browse all [Releases](https://github.com/s-choung/timetimer/releases). Requires **macOS 14 (Sonoma)+** on **Apple Silicon (arm64)**.
+Prefer a plain archive? Grab the [.zip](https://github.com/s-choung/seantimer/releases/latest/download/Seantimer.zip), or browse all [Releases](https://github.com/s-choung/seantimer/releases). Requires **macOS 14 (Sonoma)+** on **Apple Silicon (arm64)**.
 
 > **First launch:** this build is ad-hoc signed (no Apple notarization), so
 > macOS may say it can't verify the developer. Right-click the app → **Open** →
 > **Open**, or run once:
 > ```bash
-> xattr -dr com.apple.quarantine /Applications/timetimer_sean.app
+> xattr -dr com.apple.quarantine /Applications/Seantimer.app
 > ```
 
 ## Features
@@ -39,12 +39,12 @@ Prefer a plain archive? Grab the [.zip](https://github.com/s-choung/timetimer/re
   - `이번주 집중한 시간` (this calendar week)
   - inline **rename** (✎) and **delete** (🗑) per row.
 - **Persistence** — append-only JSON Lines at
-  `~/Library/Application Support/UltimateFocus/sessions.jsonl`.
+  `~/Library/Application Support/Seantimer/sessions.jsonl`.
 
 ## Build & run
 
 ```bash
-bash build.sh        # compile → build/timetimer_sean.app
+bash build.sh        # compile → build/Seantimer.app
 bash build.sh run    # build, then launch
 ```
 
@@ -52,7 +52,7 @@ Alternatively, generate an Xcode project:
 
 ```bash
 brew install xcodegen
-xcodegen            # → UltimateFocus.xcodeproj, then open and ⌘R
+xcodegen            # → Seantimer.xcodeproj, then open and ⌘R
 ```
 
 ## Tests
@@ -76,3 +76,10 @@ Tests/CoreTests  XCTest over the core
 This is a **macOS-only** app (SwiftUI + AppKit: `NSStatusItem`, `NSWindow`).
 A cross-platform (incl. Windows) port would mean re-implementing the UI in a
 framework like Tauri or Flutter; only `Sources/Core` would carry over.
+
+## Disclaimer
+
+Seantimer is an independent, unaffiliated hobby project inspired by the
+**Time Timer®** visual-countdown concept. *Time Timer* is a registered trademark
+of Time Timer LLC; this project is not affiliated with, endorsed by, or connected
+to Time Timer LLC. The code here is original.

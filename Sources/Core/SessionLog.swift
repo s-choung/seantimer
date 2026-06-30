@@ -3,7 +3,7 @@ import Foundation
 /// Append-only JSON Lines persistence (plan §5).
 ///
 /// Default location (App Sandbox is OFF): `~/Library/Application
-/// Support/UltimateFocus/sessions.jsonl`, one JSON object per line. Append-only
+/// Support/Seantimer/sessions.jsonl`, one JSON object per line. Append-only
 /// keeps it crash-safe and concurrency-trivial — the file is never rewritten.
 struct SessionLog {
     let fileURL: URL
@@ -16,7 +16,7 @@ struct SessionLog {
         let base = FileManager.default
             .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
         return base
-            .appendingPathComponent("UltimateFocus", isDirectory: true)
+            .appendingPathComponent("Seantimer", isDirectory: true)
             .appendingPathComponent("sessions.jsonl")
     }
 

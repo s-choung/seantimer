@@ -1,18 +1,18 @@
 import SwiftUI
 import AppKit
 
-/// Ultimate Focus / timetimer_sean — a lightweight Time Timer-style visual
-/// countdown (plan §6). A resizable hidden-title-bar window plus a live
-/// menu-bar readout whose click shows/hides that window. On finish: a system
-/// sound (volume per Settings) and a Dock bounce (locked decision 2).
+/// Seantimer — a lightweight Time Timer-style visual countdown (plan §6).
+/// A resizable hidden-title-bar window plus a live menu-bar readout whose click
+/// shows/hides that window. On finish: a system sound (volume per Settings) and
+/// a Dock bounce (locked decision 2).
 @main
-struct UltimateFocusApp: App {
+struct SeantimerApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var model = TimerModel.shared
     @State private var floatOnTop = false
 
     var body: some Scene {
-        Window("timetimer_sean", id: "main") {
+        Window("Seantimer", id: "main") {
             ContentView(model: model, floatOnTop: $floatOnTop)
                 .onChange(of: floatOnTop) { _, on in applyFloat(on) }
         }
@@ -39,7 +39,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = item.button {
-            button.image = NSImage(systemSymbolName: "timer", accessibilityDescription: "timetimer_sean")
+            button.image = NSImage(systemSymbolName: "timer", accessibilityDescription: "Seantimer")
             button.imagePosition = .imageLeading
             button.font = .monospacedDigitSystemFont(ofSize: 13, weight: .medium)
             button.target = self

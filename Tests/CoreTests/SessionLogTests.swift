@@ -1,5 +1,5 @@
 import XCTest
-@testable import UltimateFocus
+@testable import Seantimer
 
 final class SessionLogTests: XCTestCase {
     func testAppendThenReadRoundTrips() throws {
